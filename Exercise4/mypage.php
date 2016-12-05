@@ -270,6 +270,10 @@
 										
 		</div>
 
+		<button onclick="toggle_div('sectionToHide');">Click here</button>
+		
+		<div id="sectionToHide">gabgabgabgab</div>
+		
     </body>
 	
 	<script>
@@ -309,6 +313,18 @@
 	function reloadPage(){
 		location.reload();
 	}
+	
+	//experiment
+	function toggle_div(id){
+		
+		var divEl = document.getElementById(id);
+		
+		if(divEl.style.display == 'none')
+			divEl.style.display = 'block';
+		else
+			divEl.style.display = 'none';
+	}
+	//end experiment
 	
 	</script>
 </html>
