@@ -109,8 +109,25 @@
 					
 		#phpDIV{
 				text-align: center;
+			}
 			
-		}
+		#headerLink{
+				text-decoration: none;
+				text-align: center;
+				font-family: Arial, sans-serif;
+				font-size: 350%
+			}
+		
+		#headerLinkk{
+				
+				text-decoration: none;
+				text-align: center;
+				font-family: Arial, sans-serif;
+				color: #008CBA;
+				font-style: italic;
+				font-weight: bold;
+			
+			}
 
 	
 	</style>
@@ -118,7 +135,7 @@
 	
     <body id = "bodyID" bgcolor="lightblue">
     
-        <a href = "http://gonzalezgabrield.blogspot.com/"><h1 align="center">Gab's blog</h1>
+        <div id="headerLink"><a href = "http://gonzalezgabrield.blogspot.com/" id="headerLinkk">Gab's blog</div>
 
         <div id = "divContent">
 		
