@@ -270,7 +270,7 @@
 										
 		</div>
 
-		<button onclick="toggle_div('sectionToHide');">Click here</button>
+		<button onclick="toggle_div('phpDIV');">Click here</button>
 		
 		<div id="sectionToHide">gabgabgabgab</div>
 		
