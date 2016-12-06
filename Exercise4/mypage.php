@@ -109,6 +109,13 @@
 					
 		#phpDIV{
 				text-align: center;
+				display: none;
+				width: 1200px;
+				border: 14px solid white;
+				padding: 34px;
+				margin-left: auto;
+				margin-right: auto;
+				margin-top: 25px;
 			}
 			
 		#headerLink{
@@ -126,8 +133,25 @@
 				color: #008CBA;
 				font-style: italic;
 				font-weight: bold;
-			
 			}
+			
+		#formButton{
+					position: absolute;
+					top: 10px;
+					left: 25px;
+					display: block;
+					background-color: rgb(255, 191, 64);
+					border: none;
+					color: rgb(116, 139, 184);
+					padding: 2px -3px;
+					text-align: center;
+					text-decoration: none;
+					font-size: 15px;
+					margin:0 auto;
+					border-radius: 50px;
+					border: 3px solid white;
+					transition-duration: 0.4s;
+		}
 
 	
 	</style>
@@ -155,7 +179,7 @@
 		
 		<div id = "divBody">
 		
-			<button id = "welcomeToMeButton" class = "button"><h2 id="welcome-blog" align= center>Welcome To Me</h2></button>
+			<button onclick = "toggle_div('welcomeToMeButton')" id = "welcomeToMeButton" class = "button"><h2 id="welcome-blog" align= center>Welcome To Me</h2></button>
 				<p></p>
 			
 				<div id="blog1"></div>
@@ -172,6 +196,12 @@
 		
 		<button id = "invertButton" class = "xbutton">invert colors</button>
 		<button id = "normalButton" class = "xbutton" onclick = "reloadPage()">reload page</button>
+		
+		<!-- Button to fill out a PHP form.
+			 When clicked once, it loads the form.
+			 Clicked twice, it hide the form
+			 ESSENCIALLY A TOGGLE BUTTON-->
+		<button onclick="toggle_phpDIV('phpDIV');" id = "formButton">Fill out a form</button>
 		
 		<div id="phpDIV">
 									
@@ -269,10 +299,6 @@
 										?>
 										
 		</div>
-
-		<button onclick="toggle_div('phpDIV');">Click here</button>
-		
-		<div id="sectionToHide">gabgabgabgab</div>
 		
     </body>
 	
@@ -315,14 +341,14 @@
 	}
 	
 	//experiment
-	function toggle_div(id){
+	function toggle_phpDIV(id){
 		
 		var divEl = document.getElementById(id);
 		
-		if(divEl.style.display == 'none')
-			divEl.style.display = 'block';
-		else
+		if(divEl.style.display == 'block')
 			divEl.style.display = 'none';
+		else
+			divEl.style.display = 'block';
 	}
 	//end experiment
 	
