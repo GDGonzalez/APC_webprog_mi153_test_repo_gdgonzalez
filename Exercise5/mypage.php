@@ -54,6 +54,7 @@ if(isset($_GET['delete_id']))
 				padding: 34px;
 				margin-left: auto;
 				margin-right: auto;
+				box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 				}
 		
 		#gabPic{
@@ -131,6 +132,7 @@ if(isset($_GET['delete_id']))
 				margin-left: auto;
 				margin-right: auto;
 				margin-top: 25px;
+				box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 			}
 			
 		#headerLink{
