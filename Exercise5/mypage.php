@@ -98,7 +98,7 @@ if(isset($_GET['delete_id']))
 					font-size: 15px;
 					margin:0 auto;
 					border-radius: 50px;
-					border: 3px solid white;
+					border: 3px outset white;
 					transition-duration: 0.4s;
 		}
 		
@@ -116,7 +116,7 @@ if(isset($_GET['delete_id']))
 					font-size: 15px;
 					margin:0 auto;
 					border-radius: 50px;
-					border: 3px solid white;
+					border: 3px outset white;
 					transition-duration: 0.4s;
 					}
 					
@@ -162,7 +162,7 @@ if(isset($_GET['delete_id']))
 					font-size: 15px;
 					margin:0 auto;
 					border-radius: 50px;
-					border: 3px solid white;
+					border: 3px outset white;
 					transition-duration: 0.4s;
 					}
 		
@@ -176,18 +176,19 @@ if(isset($_GET['delete_id']))
 					width:80%;
 					font-family:Tahoma, Geneva, sans-serif;
 					font-weight:bolder;
-					color:#999;
+					color:black;
 					margin-bottom:80px;
 					}
 
 		#tableINDEX a{
+					font-family: Arial, sans-serif;
 					text-decoration:none;
-					color:#00a2d1;
+					color:#008CBA;
 					}
 					 
 		#tableINDEX,td,th{
 					border-collapse:collapse;
-					border:solid #d0d0d0 1px;
+					border:solid white 1px;
 					padding:20px;
 					}
 					 
@@ -202,7 +203,7 @@ if(isset($_GET['delete_id']))
 					}
 					 
 		#tableINDEX td input:focus{
-					box-shadow:inset 1px 1px 1px rgba(1,0,0,0.2);
+					box-shadow:solid 1px 1px 1px rgba(1,0,0,0.2);
 					outline:none;
 					}
 					 
@@ -341,7 +342,7 @@ if(isset($_GET['delete_id']))
 	var welcomeToMeButtonEl = document.getElementById("welcomeToMeButton");
 	var blog1El = document.getElementById("blog1");
 	var clicked = function(){
-		blog1El.innerHTML = "<h3>June of 2015</h3><p>Woahohoho! Hello there my dear readers (that may not even exist). Before I start and continue this blog of mine, I would like to introduce myself.</p> <p>My name is Gabriel Joseph De la Pasion Gonzalez. 'Gab' for short. 'For short'... yeah, most people really prefer nicknames with a single syllable. 'Cholo' becomes 'Cho', 'Richard' becomes 'Chard', 'Raphael' becomes 'L' for crying out loud! So I guess my nickname's no problem for you. ANYWAYS, I graduated from Sacred Heart Academy of Pasig. Try to guess where that's from. Kidding! Pasig of course. During our first day of school, our professors asked us to introduce ourselves and mention what high school we graduated from. I noticed right away that the vast majority of my fellow block mates graduated from schools far from Pasig, particularly schools from Pasay, Makati, Paranaque, etc. I kinda felt out of place because I was like the only one who lives in Pasig City. Continuing my introduction, I am 17 years old, born on December 26, in Makati City, to my mother: Anne Margrette De la Pasion Gonzalez, and to my father: Jesus V. Gonzalez. Funny how he's named after God's son when he barely has any of His characteristics. Sorry, I went off topic. Furthermore, I have 2 younger siblings, Miguel and Martin Gonzalez, 15 and 9 respectively. They both live in Pasig and study in my Alma Matter. Well, I guess that's all you have to know about my family background.</p> <p>I am currently a student of Asia Pacific College, the BEST school... in Humabon St. as a wise man once told me. I believe that it is one of the excelling colleges when it comes to IT education. On par with De la Salle University and Ateneo de Manila University as I would like to believe. I saw it on multiple sites! So it must have some degree of legitimacy. Being a freshman in my first term, I am really enjoying my course so far. My course? Well, Information Technology of course! BSIT-MI or Bachelor of Science in Information Technology specialization of Mobile and Internet Technology. To be honest, I would've preferred BS-MIS or Bachelor of Science in Management Information Systems. Unfortunately, I did not pass DLSU to get the privilege of taking that course. So I instead took IT here in APC for a lot of reasonable factors. First, LOCATION. Location is very important in choosing a college. The location of your school from your house could greatly affect and impact your daily life. Choosing a college far away from your home could mean that you'll have to spend hours of your precious life in public transportation. Which is generally not preferred by most people. My primary reason for choosing APC was because of the location. I'm blessed to have a family living in Magallanes with a house that so happens to have a spare room for me to inhabit during the weekdays. That means that it only takes roughly 9-11 minutes to get to class. Amazing right?! Okay. Second reason why I chose APC is because of the rich and excellent IT education that the school offers. I'v read it online, talked to certain human resource agents, and talked to alumni's of the school to get this important piece of knowledge. A college known for rich IT education minutes away from where you stay? Why not, right!?</p> <p>This year I plan to aim high. I want a really high GPA but for a person with almost non-existent study habits, this would be a very tough challenge. But I believe that with the right determination and focus, even a student like me could get a 3.0-4.0 GPA! I really really really want this. The feeling of receiving high grades is soooo self-satisfying and it brings your confidence up. Work hard, play hard. Before, I'd spend most of my time enjoying life without really setting my priorities. Priorities such as study habits and what not. This year I plan to change that. With more time focusing on academics and studies but of course, still keeping a solid social life with people. Hanging out and socializing is also as important as academics. Because what good is all your knowledge for if you cannot even interact properly with other people? I believe that there should always be a balance of both. A Ying and a Yang. Just be focused on your goals and never lose track of your priorities. But never not have fun. Its always a balance, and I can't stress that enough. We study hard, for a good promising future, then we work hard, then play hard. You can't get without giving. You reap what you sow. I am motivated by the life style I want to have once I graduate college. I dream of earning as much as my Tito. The Tito that strongly suggested that I take IT (since I couldn't push through with Aviation). He is an IT Director and earns roughly half a million a month. I want to be able to live that kind of life. Because with that kind of occupation and salary, I would finally be able to bless others the way others blessed me. To give back. To give back to people I owe a lot of thankfulness to. I really want to be a blessing to other and to shower other people with their wishes. So hopefully, in the future, I will reach this goal of mine. But of course, I wouldn't be able to do that without God and His guidance and Word.</p>";
+		blog1El.innerHTML = "<h3>June of 2015</h3><p>Woahohoho! Hello there my dear readers (that may not even exist). Before I start and continue this blog of mine, I would like to introduce myself.</p> <p>My name is Gabriel Joseph De la Pasion Gonzalez. 'Gab' for short. 'For short'... yeah, most people really prefer nicknames with a single syllable. 'Cholo' becomes 'Cho', 'Richard' becomes 'Chard', 'Raphael' becomes 'L' for crying out loud! So I guess my nickname's no problem for you. ANYWAYS, I graduated from Sacred Heart Academy of Pasig. Try to guess where that's from. Kidding! Pasig of course. During our first day of school, our professors asked us to introduce ourselves and mention what high school we graduated from. I noticed right away that the vast majority of my fellow block mates graduated from schools far from Pasig, particularly schools from Pasay, Makati, Paranaque, etc. I kinda felt out of place because I was like the only one who lives in Pasig City. Continuing my introduction, I am 17 years old, born on December 26, in Makati City, to my mother: Anne Margrette De la Pasion Gonzalez, and to my father: Jesus V. Gonzalez. Funny how he's named after God's son when he barely has any of His characteristics. Sorry, I went off topic. Furthermore, I have 2 younger siblings, Miguel and Martin Gonzalez, 15 and 9 respectively. They both live in Pasig and study in my Alma Matter. Well, I guess that's all you have to know about my family background.</p> <p>I am currently a student of Asia Pacific College, the BEST school... in Humabon St. as a wise man once told me. I believe that it is one of the excelling colleges when it comes to IT education. On par with De la Salle University and Ateneo de Manila University as I would like to believe. I saw it on multiple sites! So it must have some degree of legitimacy. Being a freshman in my first term, I am really enjoying my course so far. My course? Well, Information Technology of course! BSIT-MI or Bachelor of Science in Information Technology specialization of Mobile and Internet Technology. To be honest, I would've preferred BS-MIS or Bachelor of Science in Management Information Systems. Unfortunately, I did not pass DLSU to get the privilege of taking that course. So I instead took IT here in APC for a lot of reasonable factors. First, LOCATION. Location is very important in choosing a college. The location of your school from your house could greatly affect and impact your daily life. Choosing a college far away from your home could mean that you'll have to spend hours of your precious life in public transportation. Which is generally not preferred by most people. My primary reason for choosing APC was because of the location. I'm blessed to have a family living in Magallanes with a house that so happens to have a spare room for me to inhabit during the weekdays. That means that it only takes roughly 9-11 minutes to get to class. Amazing right?! Okay. Second reason why I chose APC is because of the rich and excellent IT education that the school offers. I'v read it online, talked to certain human resource agents, and talked to alumni's of the school to get this important piece of knowledge. A college known for rich IT education minutes away from where you stay? Why not, right!?</p> <p>This year I plan to aim high. I want a really high GPA but for a person with almost non-existent study habits, this would be a very tough challenge. But I believe that with the right determination and focus, even a student like me could get a 3.0-4.0 GPA! I really really really want this. The feeling of receiving high grades is soooo self-satisfying and it brings your confidence up. Work hard, play hard. Before, I'd spend most of my time enjoying life without really setting my priorities. Priorities such as study habits and what not. This year I plan to change that. With more time focusing on academics and studies but of course, still keeping a inset social life with people. Hanging out and socializing is also as important as academics. Because what good is all your knowledge for if you cannot even interact properly with other people? I believe that there should always be a balance of both. A Ying and a Yang. Just be focused on your goals and never lose track of your priorities. But never not have fun. Its always a balance, and I can't stress that enough. We study hard, for a good promising future, then we work hard, then play hard. You can't get without giving. You reap what you sow. I am motivated by the life style I want to have once I graduate college. I dream of earning as much as my Tito. The Tito that strongly suggested that I take IT (since I couldn't push through with Aviation). He is an IT Director and earns roughly half a million a month. I want to be able to live that kind of life. Because with that kind of occupation and salary, I would finally be able to bless others the way others blessed me. To give back. To give back to people I owe a lot of thankfulness to. I really want to be a blessing to other and to shower other people with their wishes. So hopefully, in the future, I will reach this goal of mine. But of course, I wouldn't be able to do that without God and His guidance and Word.</p>";
 		}
 	welcomeToMeButtonEl.addEventListener("click", clicked);
 	
