@@ -122,7 +122,7 @@ if(isset($_GET['delete_id']))
 					
 		#phpDIV{
 				text-align: center;
-				display: none;
+				/*display: none;*/
 				width: 1200px;
 				border: 14px solid white;
 				padding: 34px;
@@ -165,6 +165,14 @@ if(isset($_GET['delete_id']))
 					border: 3px solid white;
 					transition-duration: 0.4s;
 					}
+		
+		/* CSS FOR INDEX.PHP PORTION */
+		
+		#bodyINDEX{
+					margin-top:50px;
+					}
+
+		
 	
 	</style>
 	
@@ -314,8 +322,8 @@ if(isset($_GET['delete_id']))
 	function reloadPage(){
 		location.reload();
 	}
-	
-	//experiment
+	/*
+	//form button script
 	function toggle_phpDIV(id){
 		
 		var divEl = document.getElementById(id);
@@ -325,7 +333,8 @@ if(isset($_GET['delete_id']))
 		else
 			divEl.style.display = 'block';
 	}
-	//end experiment
+	//end of form button script
+	*/
 	
 	</script>
 </html>
