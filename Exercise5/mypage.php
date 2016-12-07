@@ -44,6 +44,7 @@ if(isset($_GET['delete_id']))
 					border: 8px solid white;
 					padding: 5px;
 					margin: 18px;
+					box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 					}
                 
         #divBody{
@@ -59,6 +60,7 @@ if(isset($_GET['delete_id']))
 				border: 8px solid white;
 				position: absolute;
 				top: 75px;
+				box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 				}
 				
 		.button{
