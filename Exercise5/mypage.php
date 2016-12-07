@@ -201,6 +201,11 @@ if(isset($_GET['delete_id']))
 					outline:none;
 					}
 					 
+		#tableINDEX td input:focus{
+					box-shadow:inset 1px 1px 1px rgba(1,0,0,0.2);
+					outline:none;
+					}
+					 
 		
 	
 	</style>
