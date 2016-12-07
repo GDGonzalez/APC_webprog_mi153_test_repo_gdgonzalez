@@ -17,9 +17,9 @@ if(isset($_GET['delete_id']))
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Project: Blog</title>
 	<style>
+		
         h3{ color: black;
-            text-indent: 20px;}
-        
+            text-indent: 20px;} 
         h1{ color:rgb(30, 52, 161); }
         
         a{ text-decoration:none; }
@@ -164,28 +164,27 @@ if(isset($_GET['delete_id']))
 					border-radius: 50px;
 					border: 3px solid white;
 					transition-duration: 0.4s;
-		}
-
+					}
 	
 	</style>
 	
 	<link rel="stylesheet" href="style.css" type="text/css" />
-<script type="text/javascript">
-function edt_id(id)
-{
- if(confirm('Sure to edit ?'))
- {
-  window.location.href='edit_data.php?edit_id='+id;
- }
-}
-function delete_id(id)
-{
- if(confirm('Sure to Delete ?'))
- {
-  window.location.href='index.php?delete_id='+id;
- }
-}
-</script>
+																				<script type="text/javascript">
+																				function edt_id(id)
+																				{
+																				 if(confirm('Sure to edit ?'))
+																				 {
+																				  window.location.href='edit_data.php?edit_id='+id;
+																				 }
+																				}
+																				function delete_id(id)
+																				{
+																				 if(confirm('Sure to Delete ?'))
+																				 {
+																				  window.location.href='index.php?delete_id='+id;
+																				 }
+																				}
+																				</script>
 
 	</head>
 	
@@ -235,100 +234,44 @@ function delete_id(id)
 			 ESSENCIALLY A TOGGLE BUTTON-->
 		<button onclick="toggle_phpDIV('phpDIV');" id = "formButton">Fill out a form</button>
 		
+		<!-- index.php portion -->
 		<div id="phpDIV">
 									
 		
-												<?php
-										// define variables and set to empty values
-										$nameErr = $emailErr = $genderErr = $websiteErr = "";
-										$name = $email = $gender = $comment = $website = "";
+ <center>
 
-										if ($_SERVER["REQUEST_METHOD"] == "POST") {
-										  if (empty($_POST["name"])) {
-											$nameErr = "Name is required";
-										  } else {
-											$name = test_input($_POST["name"]);
-											// check if name only contains letters and whitespace
-											if (!preg_match("/^[a-zA-Z ]*$/",$name)) {
-											  $nameErr = "Only letters and white space allowed"; 
-											}
-										  }
-										  
-										  if (empty($_POST["email"])) {
-											$emailErr = "Email is required";
-										  } else {
-											$email = test_input($_POST["email"]);
-											// check if e-mail address is well-formed
-											if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-											  $emailErr = "Invalid email format"; 
-											}
-										  }
-											
-										  if (empty($_POST["website"])) {
-											$website = "";
-										  } else {
-											$website = test_input($_POST["website"]);
-											// check if URL address syntax is valid (this regular expression also allows dashes in the URL)
-											if (!preg_match("/\b(?:(?:https?|ftp):\/\/|www\.)[-a-z0-9+&@#\/%?=~_|!:,.;]*[-a-z0-9+&@#\/%=~_|]/i",$website)) {
-											  $websiteErr = "Invalid URL"; 
-											}
-										  }
+<div id="bodyPHP">
+ <div id="content">
+    <table align="center">
+    <tr>
+    <th colspan="5"><a href="add_data.php">add data here.</a></th>
+    </tr>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>City Name</th>
+    <th colspan="2">Operations</th>
+    </tr>
+    <?php
+ $sql_query="SELECT * FROM users";
+ $result_set=mysqli_query($con, $sql_query);
+ while($row=mysqli_fetch_row($result_set))
+ {
+  ?>
+        <tr>
+        <td><?php echo $row[1]; ?></td>
+        <td><?php echo $row[2]; ?></td>
+        <td><?php echo $row[3]; ?></td>
+  <td align="center"><a href="javascript:edt_id('<?php echo $row[0]; ?>')"><img src="b_edit.png" align="EDIT" /></a></td>
+        <td align="center"><a href="javascript:delete_id('<?php echo $row[0]; ?>')"><img src="b_drop.png" align="DELETE" /></a></td>
+        </tr>
+        <?php
+ }
+ ?>
+    </table>
+    </div>
+</div>
 
-										  if (empty($_POST["comment"])) {
-											$comment = "";
-										  } else {
-											$comment = test_input($_POST["comment"]);
-										  }
-
-										  if (empty($_POST["gender"])) {
-											$genderErr = "Gender is required";
-										  } else {
-											$gender = test_input($_POST["gender"]);
-										  }
-										}
-
-										function test_input($data) {
-										  $data = trim($data);
-										  $data = stripslashes($data);
-										  $data = htmlspecialchars($data);
-										  return $data;
-										}
-										?>
-
-										<h2>PHP Form Validation Example</h2>
-										<p><span class="error">* required field.</span></p>
-										<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
-										  Name: <input type="text" name="name" value="<?php echo $name;?>">
-										  <span class="error">* <?php echo $nameErr;?></span>
-										  <br><br>
-										  E-mail: <input type="text" name="email" value="<?php echo $email;?>">
-										  <span class="error">* <?php echo $emailErr;?></span>
-										  <br><br>
-										  Website: <input type="text" name="website" value="<?php echo $website;?>">
-										  <span class="error"><?php echo $websiteErr;?></span>
-										  <br><br>
-										  Comment: <textarea name="comment" rows="5" cols="40"><?php echo $comment;?></textarea>
-										  <br><br>
-										  Gender:
-										  <input type="radio" name="gender" <?php if (isset($gender) && $gender=="female") echo "checked";?> value="female">Female
-										  <input type="radio" name="gender" <?php if (isset($gender) && $gender=="male") echo "checked";?> value="male">Male
-										  <span class="error">* <?php echo $genderErr;?></span>
-										  <br><br>
-										  <input type="submit" name="submit" value="Submit">  
-										</form>
-
-										<?php
-										echo "<h2>Your Input:</h2>";
-										echo $name;
-										echo "<br>";
-										echo $email;
-										echo "<br>";
-										echo $website;
-										echo "<br>";
-										echo $comment;
-										echo "<br>";
-										echo $gender;
-										?>
+</center>
 										
 		</div>
 		
