@@ -191,6 +191,16 @@ if(isset($_GET['delete_id']))
 					padding:20px;
 					}
 					 
+		#tableINDEX td input{
+					width:97%;
+					height:35px;
+					border:dashed #00a2d1 1px;
+					padding-left:15px;
+					font-family:Verdana, Geneva, sans-serif;
+					box-shadow:0px 0px 0px rgba(1,0,0,0.2);
+					outline:none;
+					}
+					 
 		
 	
 	</style>
