@@ -180,6 +180,11 @@ if(isset($_GET['delete_id']))
 					margin-bottom:80px;
 					}
 
+		#tableINDEX a{
+					text-decoration:none;
+					color:#00a2d1;
+					}
+					 
 		
 	
 	</style>
