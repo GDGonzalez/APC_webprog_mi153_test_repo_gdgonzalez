@@ -185,6 +185,12 @@ if(isset($_GET['delete_id']))
 					color:#00a2d1;
 					}
 					 
+		#tableINDEX,td,th{
+					border-collapse:collapse;
+					border:solid #d0d0d0 1px;
+					padding:20px;
+					}
+					 
 		
 	
 	</style>
