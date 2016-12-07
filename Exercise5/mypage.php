@@ -172,6 +172,14 @@ if(isset($_GET['delete_id']))
 					margin-top:50px;
 					}
 
+		#tableINDEX{
+					width:80%;
+					font-family:Tahoma, Geneva, sans-serif;
+					font-weight:bolder;
+					color:#999;
+					margin-bottom:80px;
+					}
+
 		
 	
 	</style>
