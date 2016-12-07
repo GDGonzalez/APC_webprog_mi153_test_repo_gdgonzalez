@@ -242,7 +242,7 @@ if(isset($_GET['delete_id']))
 
 <div id="bodyPHP">
  <div id="content">
-    <table align="center">
+    <table align="center" id="tableINDEX">
     <tr>
     <th colspan="5"><a href="add_data.php">add data here.</a></th>
     </tr>
