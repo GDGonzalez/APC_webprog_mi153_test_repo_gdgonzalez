@@ -206,6 +206,19 @@ if(isset($_GET['delete_id']))
 					outline:none;
 					}
 					 
+		#tableINDEX td button{
+					border:solid #f9f9f9 0px;
+					box-shadow:1px 1px 1px rgba(1,0,0,0.2);
+					outline:none;
+					background:#00a2d1;
+					padding:9px 15px 9px 15px;
+					color:#f9f9f9;
+					font-family:Arial, Helvetica, sans-serif;
+					font-weight:bolder;
+					border-radius:3px;
+					width:49.5%;
+					}
+					 
 		
 	
 	</style>
