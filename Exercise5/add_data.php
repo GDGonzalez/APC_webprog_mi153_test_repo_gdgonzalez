@@ -22,7 +22,6 @@ if(isset($_POST['btn-save']))
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>CRUD Operations With PHP and MySql - By Cleartuts</title>
-<link rel="stylesheet" href="style.css" type="text/css" />
 </head>
 <body>
 <center>
@@ -37,7 +36,7 @@ if(isset($_POST['btn-save']))
     <form method="post">
     <table align="center">
     <tr>
-    <td align="center"><a href="index.php">back to main page</a></td>
+    <td align="center"><a href="mypage.php">back to main page</a></td>
     </tr>
     <tr>
     <td><input type="text" name="first_name" placeholder="First Name" required /></td>

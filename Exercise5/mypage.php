@@ -232,7 +232,6 @@ if(isset($_GET['delete_id']))
 	
 	</style>
 	
-	<link rel="stylesheet" href="style.css" type="text/css" />
 																				<script type="text/javascript">
 																				function edt_id(id)
 																				{
@@ -315,7 +314,8 @@ if(isset($_GET['delete_id']))
     <th>City Name</th>
     <th colspan="2">Operations</th>
     </tr>
-    <?php
+	
+ <?php
  $sql_query="SELECT * FROM users";
  $result_set=mysqli_query($con, $sql_query);
  while($row=mysqli_fetch_row($result_set))
