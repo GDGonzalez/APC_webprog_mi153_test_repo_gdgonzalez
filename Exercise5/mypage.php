@@ -33,7 +33,7 @@ if(isset($_GET['delete_id']))
 			background-color: lightblue;
 			}
                 
-        img{
+        #dogPic{
 			position: absolute;
             top:70px;
             left:82%;
@@ -268,7 +268,7 @@ if(isset($_GET['delete_id']))
 		</div>
 		
 		<a href = "http://www.golden-retriever.com/" target = "_blank">
-        <img id ="gabPic" src="https://www.kasandbox.org/programming-images/animals/retriever.png" alt="gab" width="200">
+        <img id ="dogPic" src="https://www.kasandbox.org/programming-images/animals/retriever.png" alt="gab" width="200">
         </a>
 		
 		<div id = "divBody">
@@ -338,20 +338,6 @@ if(isset($_GET['delete_id']))
 </center>
 										
 		</div>
-		
-		
-
-<?php
-$sql_query="SELECT * FROM users";
-$result_set=mysqli_query($con,$sql_query);
-while($row = mysql_fetch_array($result))
-{
-    ?>
-    <!--Add HTML code here to display records.-->
-    <?php
-}
-?>
-
 
 		
     </body>
