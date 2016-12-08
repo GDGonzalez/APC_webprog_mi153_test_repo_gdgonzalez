@@ -30,6 +30,7 @@ if(isset($_GET['delete_id']))
 			font-family:sans-serif;
             text-align:justify;
 			filter: invert(0%);
+			background-color: lightblue;
 			}
                 
         img{
@@ -125,7 +126,7 @@ if(isset($_GET['delete_id']))
 					
 		#phpDIV{
 				text-align: center;
-				/*display: none;*/
+				display: none;
 				width: 1200px;
 				border: 14px solid white;
 				padding: 34px;
@@ -251,7 +252,7 @@ if(isset($_GET['delete_id']))
 
 	</head>
 	
-    <body id = "bodyID" bgcolor="lightblue">
+    <body id = "bodyID">
     
         <div id="headerLink"><a href = "http://gonzalezgabrield.blogspot.com/" id="headerLinkk">Gab's blog</div>
 
@@ -307,7 +308,7 @@ if(isset($_GET['delete_id']))
  <div id="content">
     <table align="center" id="tableINDEX">
     <tr>
-    <th colspan="5"><a href="add_data.php">add data here.</a></th>
+    <th colspan="5"><a href="add_data.php">/ / A d d   D a t a   H e r e / /</a></th>
     </tr>
     <th>First Name</th>
     <th>Last Name</th>
@@ -377,7 +378,7 @@ if(isset($_GET['delete_id']))
 	function reloadPage(){
 		location.reload();
 	}
-	/*
+	
 	//form button script
 	function toggle_phpDIV(id){
 		
@@ -389,7 +390,6 @@ if(isset($_GET['delete_id']))
 			divEl.style.display = 'block';
 	}
 	//end of form button script
-	*/
 	
 	</script>
 </html>
