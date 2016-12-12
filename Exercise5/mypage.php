@@ -318,9 +318,16 @@
     <tr>
     <td><input type="text" name="city_name" placeholder="City" required /></td>
     </tr>
-    <tr>
-    <td>
-	<button type="submit" name="btn-save"><strong>SAVE</strong></button>
+	<tr>
+    <td><input type="text" name="first_name" placeholder="Email Address" required /></td>
+    </tr>
+	<tr>
+    <td><input type="text" name="first_name" placeholder="Phone number" required /></td>
+    </tr>
+	<tr>
+	
+	<tr>
+    <td><button type="submit" name="btn-save"><strong>SAVE</strong></button>
 	<a href="index.php"><button type="button" name="btn-link"><strong>INDEX</strong></button></a>
 	</td>
 	</tr>
