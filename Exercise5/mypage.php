@@ -1,17 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<?php
- include_once 'dbconfig.php';
 
- // delete condition
- if(isset($_GET['delete_id']))
- {
- $sql_query="DELETE FROM users WHERE user_id=".$_GET['delete_id'];
- mysqli_query($sql_query);
- header("Location: $_SERVER[PHP_SELF]");
- }
-?>
 
-<?php
+ <?php
  include_once 'dbconfig.php';
  if(isset($_POST['btn-save']))
  {
@@ -24,7 +14,7 @@
  $sql_query = "INSERT INTO users(first_name,last_name,user_city) VALUES('$first_name','$last_name','$city_name')";
  mysqli_query($con, $sql_query);
  }
-?>
+ ?>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -196,7 +186,7 @@
 					transition-duration: 0.4s;
 					}
 		
-		/* CSS FOR INDEX.PHP PORTION */
+		/* CSS FOR ADD_DATA.PHP PORTION */
 		
 		#bodyINDEX{
 					margin-top:50px;
@@ -305,60 +295,20 @@
 			 ESSENCIALLY A TOGGLE BUTTON-->
 		<button onclick="toggle_phpDIV('phpDIV');" id = "formButton">Fill out a form</button>
 		
-		<!-- index.php portion -->
-		<div id="phpDIV">
+		<!-- index.php portion --><div id="phpDIV">
 									
 		
- <center>
-
-<div id="bodyPHP">
- <div id="content">
-    <table align="center" id="tableINDEX">
-    <tr>
-    <th colspan="5"><a href="add_data.php">/ / A d d   D a t a   H e r e / /</a></th>
-    </tr>
-    <th>First Name</th>
-    <th>Last Name</th>
-    <th>City Name</th>
-    <th colspan="2">Operations</th>
-    </tr>
-	
- <?php
- $sql_query="SELECT * FROM users";
- $result_set=mysqli_query($con, $sql_query);
- while($row=mysqli_fetch_row($result_set))
- {
-  ?>
-        <tr>
-        <td><?php echo $row[1]; ?></td>
-        <td><?php echo $row[2]; ?></td>
-        <td><?php echo $row[3]; ?></td>
-		<td align="center"><a href="javascript:edt_id('<?php echo $row[0]; ?>')"><img src="b_edit.png" align="EDIT" /></a></td>
-        <td align="center"><a href="javascript:delete_id('<?php echo $row[0]; ?>')"><img src="b_drop.png" align="DELETE" /></a></td>
-        </tr>
-        <?php
- }
- ?>
-    </table>
-    </div>
-</div>
-
-</center>
-
+ 
+		
 <!-- ADD_DATA.PHP -->
 <center>
-
-<div id="header">
- <div id="content">
-    <label>CRUD Operations With PHP and MySql - By Cleartuts</label>
-    </div>
-</div>
-<div id="body">
+<div id="bodyINDEX">
  <div id="content">
     <form method="post">
-    <table align="center">
+    <table align="center" id = "tableINDEX">
+	
     <tr>
-    <td align="center"><a href="mypage.php">back to main page</a></td>
+    <td align="center"><a>// ADD DATA HERE //</a></td>
     </tr>
     <tr>
     <td><input type="text" name="first_name" placeholder="First Name" required /></td>
@@ -370,8 +320,15 @@
     <td><input type="text" name="city_name" placeholder="City" required /></td>
     </tr>
     <tr>
-    <td><button type="submit" name="btn-save"><strong>SAVE</strong></button></td>
-    </tr>
+    <td>
+	<button type="submit" name="btn-save"><strong>SAVE</strong></button>
+	<a href="index.php"><button type="button" name="btn-link"><strong>INDEX</strong></button></a>
+	</td>
+	</tr>
+	<td>
+	
+	</tr>
+	
     </table>
     </form>
     </div>
