@@ -16,6 +16,22 @@ if(isset($_GET['delete_id']))
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Project: Blog</title>
+<script type="text/javascript">
+																				function edt_id(id)
+																				{
+																				 if(confirm('Sure to edit ?'))
+																				 {
+																				  window.location.href='edit_data.php?edit_id='+id;
+																				 }
+																				}
+																				function delete_id(id)
+																				{
+																				 if(confirm('Sure to Delete ?'))
+																				 {
+																				  window.location.href='mypage.php?delete_id='+id;
+																				 }
+																				}
+																				</script>
 	<style>
 		
         h3{ color: black;
@@ -35,8 +51,10 @@ if(isset($_GET['delete_id']))
                 
         #dogPic{
 			position: absolute;
-            top:70px;
+			border: 8px solid white;
+            top:75px;
             left:82%;
+			box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 			}
                 
         #divContent{
@@ -55,13 +73,6 @@ if(isset($_GET['delete_id']))
 				padding: 34px;
 				margin-left: auto;
 				margin-right: auto;
-				box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-				}
-		
-		#gabPic{
-				border: 8px solid white;
-				position: absolute;
-				top: 75px;
 				box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 				}
 				
@@ -126,7 +137,7 @@ if(isset($_GET['delete_id']))
 					
 		#phpDIV{
 				text-align: center;
-				display: none;
+				/*display: none;*/
 				width: 1200px;
 				border: 14px solid white;
 				padding: 34px;
@@ -231,23 +242,6 @@ if(isset($_GET['delete_id']))
 					}
 	
 	</style>
-	
-																				<script type="text/javascript">
-																				function edt_id(id)
-																				{
-																				 if(confirm('Sure to edit ?'))
-																				 {
-																				  window.location.href='edit_data.php?edit_id='+id;
-																				 }
-																				}
-																				function delete_id(id)
-																				{
-																				 if(confirm('Sure to Delete ?'))
-																				 {
-																				  window.location.href='index.php?delete_id='+id;
-																				 }
-																				}
-																				</script>
 
 	</head>
 	
@@ -332,6 +326,40 @@ if(isset($_GET['delete_id']))
  }
  ?>
     </table>
+    </div>
+</div>
+
+</center>
+
+<!-- ADD_DATA.PHP -->
+<center>
+
+<div id="header">
+ <div id="content">
+    <label>CRUD Operations With PHP and MySql - By Cleartuts</label>
+    </div>
+</div>
+<div id="body">
+ <div id="content">
+    <form method="post">
+    <table align="center">
+    <tr>
+    <td align="center"><a href="mypage.php">back to main page</a></td>
+    </tr>
+    <tr>
+    <td><input type="text" name="first_name" placeholder="First Name" required /></td>
+    </tr>
+    <tr>
+    <td><input type="text" name="last_name" placeholder="Last Name" required /></td>
+    </tr>
+    <tr>
+    <td><input type="text" name="city_name" placeholder="City" required /></td>
+    </tr>
+    <tr>
+    <td><button type="submit" name="btn-save"><strong>SAVE</strong></button></td>
+    </tr>
+    </table>
+    </form>
     </div>
 </div>
 
