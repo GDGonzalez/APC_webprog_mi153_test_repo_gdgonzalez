@@ -144,7 +144,7 @@
 				/*display: none;*/
 				width: 1200px;
 				border: 14px solid white;
-				padding: 34px;
+				padding: 5px 34px 5px 34px;
 				margin-left: auto;
 				margin-right: auto;
 				margin-top: 25px;
@@ -295,15 +295,12 @@
 			 ESSENCIALLY A TOGGLE BUTTON-->
 		<button onclick="toggle_phpDIV('phpDIV');" id = "formButton">Fill out a form</button>
 		
-		<!-- index.php portion --><div id="phpDIV">
-									
-		
- 
-		
+	<!-- index.php portion -->
+	<div id="phpDIV"> 
 <!-- ADD_DATA.PHP -->
 <center>
 <div id="bodyINDEX">
- <div id="content">
+
     <form method="post">
     <table align="center" id = "tableINDEX">
 	
@@ -325,18 +322,15 @@
 	<a href="index.php"><button type="button" name="btn-link"><strong>INDEX</strong></button></a>
 	</td>
 	</tr>
-	<td>
 	
-	</tr>
-	
-    </table>
-    </form>
-    </div>
-</div>
+		</table>
+		</form>
 
-</center>
-										
 		</div>
+
+		</center>
+										
+	</div>
 
 		
     </body>
