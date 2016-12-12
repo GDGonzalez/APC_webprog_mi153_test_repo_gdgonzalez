@@ -1,6 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
-
  <?php
  include_once 'dbconfig.php';
  if(isset($_POST['btn-save']))
@@ -9,9 +8,12 @@
  $first_name = $_POST['first_name'];
  $last_name = $_POST['last_name'];
  $city_name = $_POST['city_name'];
+ $email_name = $_POST['email_name'];
+ $phone_name = $_POST['phone_name'];
  
  // sql query for inserting data into database
- $sql_query = "INSERT INTO users(first_name,last_name,user_city) VALUES('$first_name','$last_name','$city_name')";
+ $sql_query = "INSERT INTO users(first_name,last_name,user_city,user_email,phone_num) 
+			   VALUES('$first_name','$last_name','$city_name','$email_name','$phone_name')";
  mysqli_query($con, $sql_query);
  }
  ?>
@@ -298,7 +300,7 @@
 	<!-- index.php portion -->
 	<div id="phpDIV"> 
 <!-- ADD_DATA.PHP -->
-<center>
+
 <div id="bodyINDEX">
 
     <form method="post">
@@ -327,8 +329,6 @@
 		</form>
 
 		</div>
-
-		</center>
 										
 	</div>
 
