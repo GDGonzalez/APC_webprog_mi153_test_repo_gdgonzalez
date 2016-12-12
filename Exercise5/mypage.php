@@ -8,12 +8,12 @@
  $first_name = $_POST['first_name'];
  $last_name = $_POST['last_name'];
  $city_name = $_POST['city_name'];
- $email_name = $_POST['email_name'];
- $phone_name = $_POST['phone_name'];
+ $email = $_POST['email'];
+ $number = $_POST['number'];
  
  // sql query for inserting data into database
  $sql_query = "INSERT INTO users(first_name,last_name,user_city,user_email,phone_num) 
-			   VALUES('$first_name','$last_name','$city_name','$email_name','$phone_name')";
+			   VALUES('$first_name','$last_name','$city_name','$email','$number')";
  mysqli_query($con, $sql_query);
  }
  ?>
@@ -319,10 +319,10 @@
     <td><input type="text" name="city_name" placeholder="City" required /></td>
     </tr>
 	<tr>
-    <td><input type="text" name="first_name" placeholder="Email Address" required /></td>
+    <td><input type="text" name="email" placeholder="Email Address" required /></td>
     </tr>
 	<tr>
-    <td><input type="text" name="first_name" placeholder="Phone number" required /></td>
+    <td><input type="text" name="number" placeholder="Phone number" required /></td>
     </tr>
 	<tr>
 	
