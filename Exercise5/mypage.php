@@ -1,17 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <?php
-include_once 'dbconfig.php';
+ include_once 'dbconfig.php';
 
-// delete condition
-if(isset($_GET['delete_id']))
-{
+ // delete condition
+ if(isset($_GET['delete_id']))
+ {
  $sql_query="DELETE FROM users WHERE user_id=".$_GET['delete_id'];
  mysqli_query($sql_query);
  header("Location: $_SERVER[PHP_SELF]");
-}
-// delete condition
+ }
 ?>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php
+ include_once 'dbconfig.php';
+ if(isset($_POST['btn-save']))
+ {
+ // variables for input data
+ $first_name = $_POST['first_name'];
+ $last_name = $_POST['last_name'];
+ $city_name = $_POST['city_name'];
+ 
+ // sql query for inserting data into database
+ $sql_query = "INSERT INTO users(first_name,last_name,user_city) VALUES('$first_name','$last_name','$city_name')";
+ mysqli_query($con, $sql_query);
+ }
+?>
+
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
