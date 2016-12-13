@@ -126,6 +126,10 @@
 					transition-duration: 0.4s;
 					}
 					
+		  button{
+				cursor:pointer;
+		  }
+					
 		#phpDIV{
 				text-align: center;
 				display: none;
@@ -283,7 +287,7 @@
 			 When clicked once, it loads the form.
 			 Clicked twice, it hide the form
 			 ESSENCIALLY A TOGGLE BUTTON-->
-		<button onclick="toggle_phpDIV('phpDIV');" id = "formButton">Fill out a form</button>
+		<button onclick="toggle_phpDIV('phpDIV');" id = "formButton" class = "xbutton">Fill out a form</button>
 		<a href = "index.php"><button id = "indexButton" class = "xbutton">Go to INDEX</button></a>
 		
 	<!-- index.php portion -->
