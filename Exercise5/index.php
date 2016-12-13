@@ -1,4 +1,3 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <?php
  include_once 'dbconfig.php';
 
@@ -6,10 +5,12 @@
  if(isset($_GET['delete_id']))
  {
  $sql_query="DELETE FROM users WHERE user_id=".$_GET['delete_id'];
- mysqli_query($sql_query);
+ mysqli_query($con,$sql_query);
  header("Location: $_SERVER[PHP_SELF]");
  }
 ?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />

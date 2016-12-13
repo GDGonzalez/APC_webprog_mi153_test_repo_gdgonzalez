@@ -284,7 +284,7 @@
 			 Clicked twice, it hide the form
 			 ESSENCIALLY A TOGGLE BUTTON-->
 		<button onclick="toggle_phpDIV('phpDIV');" id = "formButton">Fill out a form</button>
-		<button id = "indexButton" class = "xbutton">Go to INDEX</button>
+		<a href = "index.php"><button id = "indexButton" class = "xbutton">Go to INDEX</button></a>
 		
 	<!-- index.php portion -->
 	<div id="phpDIV"> 
@@ -308,10 +308,10 @@
     <td><input type="text" name="city_name" placeholder="City" required /></td>
     </tr>
 	<tr>
-    <td><input type="text" name="email" placeholder="Email Address" required /></td>
+    <td><input type="text" name="email" placeholder="Email Address"/></td>
     </tr>
 	<tr>
-    <td><input type="text" name="number" placeholder="Phone number" required /></td>
+    <td><input type="text" name="number" placeholder="Phone number"/></td>
     </tr>
 	<tr>
 	
