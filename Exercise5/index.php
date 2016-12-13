@@ -15,6 +15,23 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>CRUD Operations With PHP and MySql - By Cleartuts</title>
 
+<script type="text/javascript">
+	function edt_id(id)
+	{
+	if(confirm('Sure to edit ?'))
+	{
+	window.location.href='edit_data.php?edit_id='+id;
+	}
+	}
+	function delete_id(id)
+	{
+	if(confirm('Sure to Delete ?'))
+	{
+	window.location.href='index.php?delete_id='+id;
+	}
+}
+	</script>
+
 	<style>
 	body{
 			background-color: lightblue;

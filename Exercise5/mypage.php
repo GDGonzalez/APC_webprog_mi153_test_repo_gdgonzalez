@@ -21,23 +21,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Project: Blog</title>
-<script type="text/javascript">
-																				function edt_id(id)
-																				{
-																				 if(confirm('Sure to edit ?'))
-																				 {
-																				  window.location.href='index.php?edit_id='+id;
-																				 }
-																				}
-																				function delete_id(id)
-																				{
-																				 if(confirm('Sure to Delete ?'))
-																				 {
-																				  window.location.href='index.php?delete_id='+id;
-																				 }
-																				}
-																				</script>
+<title>WEBPROG</title>
+
 	<style>
 		
         h3{ color: black;
@@ -143,7 +128,7 @@
 					
 		#phpDIV{
 				text-align: center;
-				/*display: none;*/
+				display: none;
 				width: 1200px;
 				border: 14px solid white;
 				padding: 5px 34px 5px 34px;
