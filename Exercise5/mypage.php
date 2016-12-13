@@ -155,7 +155,7 @@
 				font-weight: bold;
 			}
 			
-		#formButton{
+		#formButton, #indexButton{
 					position: absolute;
 					top: 10px;
 					left: 25px;
@@ -172,6 +172,9 @@
 					border: 3px outset white;
 					transition-duration: 0.4s;
 					}
+		#indexButton{
+					top: 40px;
+		}
 		
 		/* CSS FOR ADD_DATA.PHP PORTION */
 		
@@ -281,12 +284,13 @@
 			 Clicked twice, it hide the form
 			 ESSENCIALLY A TOGGLE BUTTON-->
 		<button onclick="toggle_phpDIV('phpDIV');" id = "formButton">Fill out a form</button>
+		<button id = "indexButton" class = "xbutton">Go to INDEX</button>
 		
 	<!-- index.php portion -->
 	<div id="phpDIV"> 
-<!-- ADD_DATA.PHP -->
+	<!-- ADD_DATA.PHP -->
 
-<div id="bodyINDEX">
+	<div id="bodyINDEX">
 
     <form method="post">
     <table align="center" id = "tableINDEX">
